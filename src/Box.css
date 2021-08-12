@@ -1,0 +1,92 @@
+
+ .box {
+  position: relative;
+  width: 350px;
+  height: 400px;
+  color: #fff;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 30px;
+  transition: 0.5s;
+}
+
+ .box:hover {
+  transform: translateY(-20px);
+}
+
+ .box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #eeff00, #53ff44);
+}
+
+ .box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #eeff00, #53ff44);
+  filter: blur(30px);
+}
+
+ .box:nth-child(2):before,
+ .box:nth-child(2)::after {
+  background: linear-gradient(315deg, #1303f4, #ff00dd);
+}
+
+ .box:nth-child(3):before,
+ .box:nth-child(3)::after {
+  background: linear-gradient(315deg, #ffffff, #00b7ff);
+}
+
+ .box span {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+ .box .content {
+  position: relative;
+  z-index: 10;
+  padding: 20px 40px;
+}
+
+ .box .content h2 {
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+
+  .box .content p {
+  font-size: 1.1em;
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+ .box .content a {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+ .box .content a:hover {
+  background: #fff;
+  color: #111;
+}
